@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BCD</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BCD-to-7-segment decoder</h1>
+        <div class="decimal-output">
+            <span class="a"></span>
+            <span class="b"></span>
+            <span class="c"></span>
+            <span class="g"></span>
+            <span class="e"></span>
+            <span class="f"></span>
+            <span class="d"></span>
+        </div>
+        <div class="connectors">
+            <span class="line-a">
+                <span class="line"></span>
+                <span class="connect">
+                    <span class="line-2"></span>
+                </span>
+                <span class="connect">
+                    <span class="line-3"></span>
+                </span>
+            </span>
+            <span class="line-b">
+                <span class="line"></span>
+                <span class="connect">
+                    <span class="line-2"></span>
+                </span>
+            </span>
+            <span class="line-c">
+                <span class="line"></span>
+            </span>
+            <span class="line-d">
+                <span class="line"></span>
+            </span>
+            <span class="line-e">
+                <span class="line"></span>
+            </span>
+            <span class="line-f">
+                <span class="line"></span>
+                <span class="connect">
+                    <span class="line-2"></span>
+                </span>
+            </span>
+            <span class="line-g">
+                <span class="line"></span>
+                <span class="connect">
+                    <span class="line-2"></span>
+                </span>
+                <span class="connect">
+                    <span class="line-3"></span>
+                </span>
+            </span>
+        </div>
+        <div class="binary">
+            <div class="binary-output">
+                <span class="first-bit">0</span>
+                <span class="second-bit">0</span>
+                <span class="third-bit">0</span>
+                <span class="fourth-bit">0</span>
+            </div>
+            <div class="binary-inputs">
+                <span class="first-button">
+                    <span class="line">
+                        <span></span>
+                    </span>
+                    <button>O</button>
+                </span>
+                <span class="second-button">
+                    <span class="line">
+                        <span></span>
+                    </span>
+                    <button>O</button>
+                </span>
+                <span class="third-button">
+                    <span class="line">
+                        <span></span>
+                    </span>
+                    <button>O</button>
+                </span>
+                <span class="fourth-button">
+                    <span class="line">
+                        <span></span>
+                    </span>
+                    <button>O</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up">
+        <div class="box">
+            <div class="text">
+                <p>The circuit converts a <b>BCD</b> digit into 7 signals that are used
+                    to drive (activate) the segments in the display.
+                </p>
+                <p>Each segment is a small light-emitting diode (LED), which glows
+                    when driven by an electrical signal
+                </p>
+            </div>
+            <button class="exit">X</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

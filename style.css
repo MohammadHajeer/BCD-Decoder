@@ -1,0 +1,431 @@
+/*Start Global Rules*/
+:root {
+  --main-color: #2196f3;
+  --fade-main-color: #2195f313;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1b1b1b;
+}
+
+.container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/*End Global Rules*/
+/*Start Decimal Output Part*/
+.container h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+@media(max-width: 1300px) {
+  .container h1 {
+    text-align: center;
+  }
+}
+
+.container .decimal-output {
+  background-color: #1b1b1b;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 0 5px black;
+}
+
+.container .decimal-output span {
+  width: 45%;
+  height: 15px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
+
+.container .decimal-output .b,
+.c,
+.f,
+.e {
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+.container .decimal-output .b {
+  right: 0px;
+  top: 52px;
+}
+
+.container .decimal-output .c {
+  right: 0px;
+  bottom: 52px;
+}
+
+.container .decimal-output .f {
+  left: 0px;
+  bottom: 52px;
+}
+
+.container .decimal-output .e {
+  left: 0px;
+  top: 52px;
+}
+.container .decimal-output .g {
+  background-color: var(--fade-main-color);
+}
+/*End Decimal Output Part*/
+/*Start Connectors Part*/
+.container .connectors {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 38%;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: -1;
+  align-items: flex-end;
+}
+
+@media(max-width: 1300px) {
+  .container .connectors {
+    display: none;
+  }
+}
+
+.container .connectors > span {
+  background-color: var(--fade-main-color);
+  width: 20px;
+  height: 100%;
+  position: relative;
+  transition: 0.5s;
+}
+
+.container .connectors .line-b {
+  height: 80%;
+}
+
+.container .connectors .line-b .connect {
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  background-color: var(--fade-main-color);
+  transform: translateX(20px);
+}
+
+.container .connectors .line-f {
+  height: 80%;
+}
+
+.container .connectors .line-f .connect {
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  background-color: var(--fade-main-color);
+  transform: translateX(-100%);
+}
+
+.container .connectors .line-a .connect:nth-child(2) {
+  position: absolute;
+  background-color: var(--fade-main-color);
+  height: 20px;
+  width: 130px;
+  transform: translateX(20px);
+}
+
+.container .connectors .line-a .connect:nth-child(3) {
+  position: absolute;
+  background-color: var(--fade-main-color);
+  height: 20px;
+  width: 60px;
+  bottom: 0;
+  transform: translateX(20px);
+}
+
+.container .connectors .line-g .connect:nth-child(2) {
+  position: absolute;
+  background-color: var(--fade-main-color);
+  height: 20px;
+  width: 130px;
+  transform: translateX(-100%);
+}
+
+.container .connectors .line-g .connect:nth-child(3) {
+  position: absolute;
+  background-color: var(--fade-main-color);
+  height: 20px;
+  width: 60px;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+
+.container .connectors .line-c .line,
+.line-d .line,
+.line-e .line {
+  position: absolute;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+
+.container .connectors .line-c .top-bottom,
+.line-d .top-bottom,
+.line-e .top-bottom {
+  transform: scaleY(1);
+}
+
+.container .connectors .line-b .line,
+.container .connectors .line-f .line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+
+.container .connectors .line-b .top-bottom,
+.container .connectors .line-f .top-bottom {
+  transform: scaleY(1);
+}
+
+.container .connectors .line-b .line-2,
+.container .connectors .line-f .line-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.container .connectors .line-f .line-2 {
+  transform-origin: right;
+}
+
+.container .connectors .line-b .connect .right-left,
+.container .connectors .line-f .connect .right-left {
+  transform: scaleX(1);
+}
+
+.container .connectors .line-a .line,
+.container .connectors .line-g .line {
+  position: absolute;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.container .connectors .line-a .top-bottom,
+.container .connectors .line-g .top-bottom {
+  transform: scaleY(1);
+}
+
+.container .connectors .line-a .line-2,
+.line-3,
+.container .connectors .line-g .line-2,
+.line-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.container .connectors .line-a .line-2 {
+  transition-delay: 1s;
+}
+
+.container .connectors .line-g .line-2 {
+  transition-delay: 1s;
+}
+
+.container .connectors .line-a .line-2,
+.container .connectors .line-g .line-3 {
+  transform-origin: left;
+}
+
+.container .connectors .line-a .connect .right-left,
+.connect .right-left,
+.container .connectors .line-g .connect .right-left,
+.connect .right-left {
+  transform: scaleX(1);
+}
+
+.container .connectors .line-a .line-3,
+.container .connectors .line-g .line-2 {
+  transform-origin: right;
+}
+
+/*End Connectors Part*/
+/* Start Binary Part */
+.container .binary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* End Binary Part */
+/*Start Binary Output Part*/
+.container .binary .binary-output {
+  width: 350px;
+  height: 80px;
+  background-color: #1b1b1b;
+  box-shadow: 0 0 5px black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+@media(max-width: 1300px) {
+  .container .binary .binary-output {
+    width: 300px;
+  }
+}
+
+.container .binary .binary-output > span {
+  font-size: 3rem;
+}
+/*End Binary Output Part*/
+/*Start Binary inputs Part*/
+.container .binary .binary-inputs {
+  width: 450px;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+@media(max-width: 1300px) {
+  .container .binary .binary-inputs {
+    width: 300px;
+  }
+}
+
+.container .binary .binary-inputs > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .binary .binary-inputs > span .line {
+  width: 10px;
+  height: 170px;
+  background-color: var(--fade-main-color);
+  position: relative;
+}
+
+.container .binary .binary-inputs > span button {
+  background-color: var(--fade-main-color);
+  color: white;
+  /* border: 1px solid var(--main-color); */
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 5px black inset;
+}
+
+.container .binary .binary-inputs > span .line span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: scaleY(0);
+  transition: 0.5s;
+  transform-origin: bottom;
+}
+
+.container .binary .binary-inputs > span .line .top-bottom {
+  transform: scaleY(1);
+}
+
+.container .binary .binary-inputs > span button:hover {
+  color: var(--main-color);
+}
+
+.container .binary .binary-inputs > span .active {
+  color: var(--main-color);
+}
+
+.pop-up {
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.pop-up .box {
+  width: 450px;
+  min-height: 200px;
+  background-color: #1b1b1b;
+  color: white;
+  box-shadow: 0 0 10px black inset;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  line-height: 1.6;
+}
+
+.pop-up .box .text b {
+  color: var(--main-color);
+}
+
+.pop-up .box .exit {
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  background-color: black;
+  box-shadow: 0 0 5px var(--main-color) inset;
+  cursor: pointer;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
+.pop-up .box .exit:hover {
+  color: #77b3e5;
+  box-shadow: 0 0 5px #77b3e5 inset;
+}
+/*End Binary inputs Part*/
