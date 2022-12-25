@@ -1,4 +1,3 @@
-
 //Decimal Output
 let decimalOutput1 = document.querySelectorAll(
   ".container .decimal-output .a, .b, .c, .d"
@@ -19,8 +18,6 @@ let decimalOutput = [
 
 //Connector Lines
 let connectors = document.querySelectorAll(".container .connectors > span");
-// console.log(connectors[0].children[0])
-// connectors[0].children[0].classList.add("top-down")
 
 // Binary
 let binaryCode = [0, 0, 0, 0];
@@ -184,13 +181,13 @@ function showLines(...arr) {
   }
 }
 
-let popUp = document.querySelector(".pop-up")
-let exitButton = document.querySelector(".pop-up .box .exit")
+let popUp = document.querySelector(".pop-up");
+let exitButton = document.querySelector(".pop-up .box .exit");
 
 window.onload = () => {
-  popUp.style.transform = "scale(1)"
-}
+  popUp.style.transform = "scale(1)";
+};
 
 exitButton.onclick = () => {
-  popUp.style.transform = "scale(0)"
-}
+  popUp.style.transform = "scale(0)";
+};

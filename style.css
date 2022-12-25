@@ -32,11 +32,28 @@ body {
 .container h1 {
   font-size: 3rem;
   color: var(--main-color);
+  padding: 10px;
+  text-shadow: 10px 10px 4px var(--fade-main-color);
 }
 
-@media(max-width: 1300px) {
+@media (max-width: 767px) {
   .container h1 {
     text-align: center;
+  }
+}
+
+.container h1 span {
+  opacity: 0;
+  animation: appearance 0.5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -59,6 +76,7 @@ body {
   border-radius: 10px;
   background-color: var(--main-color);
   transition: 0.5s;
+  transition-delay: 1s;
 }
 
 .container .decimal-output .b,
@@ -104,7 +122,19 @@ body {
   align-items: flex-end;
 }
 
-@media(max-width: 1300px) {
+@media (max-width: 767px) {
+  .container .connectors {
+    display: none;
+  }
+}
+
+@media (max-height: 680px) {
+  .container .connectors {
+    display: none;
+  }
+}
+
+@media (min-height: 770px) {
   .container .connectors {
     display: none;
   }
@@ -186,6 +216,7 @@ body {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .container .connectors .line-c .top-bottom,
@@ -203,6 +234,7 @@ body {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .container .connectors .line-b .top-bottom,
@@ -219,7 +251,7 @@ body {
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.5s;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 
 .container .connectors .line-f .line-2 {
@@ -240,7 +272,7 @@ body {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: 0.5s;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 
 .container .connectors .line-a .top-bottom,
@@ -258,6 +290,7 @@ body {
   background-color: var(--main-color);
   transform: scaleX(0);
   transition: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .container .connectors .line-a .line-2 {
@@ -306,9 +339,9 @@ body {
   z-index: 1;
 }
 
-@media(max-width: 1300px) {
+@media (max-width: 767px) {
   .container .binary .binary-output {
-    width: 300px;
+    width: 250px;
   }
 }
 
@@ -319,15 +352,22 @@ body {
 /*Start Binary inputs Part*/
 .container .binary .binary-inputs {
   width: 450px;
+  max-width: 100%;
   height: 200px;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
 }
 
-@media(max-width: 1300px) {
+@media (max-width: 767px) {
   .container .binary .binary-inputs {
-    width: 300px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container .binary .binary-inputs {
+    width: 280px;
   }
 }
 
@@ -347,7 +387,7 @@ body {
 .container .binary .binary-inputs > span button {
   background-color: var(--fade-main-color);
   color: white;
-  /* border: 1px solid var(--main-color); */
+  border: none;
   font-size: 2rem;
   width: 40px;
   height: 40px;
@@ -378,7 +418,8 @@ body {
 .container .binary .binary-inputs > span .active {
   color: var(--main-color);
 }
-
+/*End Binary inputs Part*/
+/* Start Pop Up */
 .pop-up {
   position: absolute;
   height: 100vh;
@@ -406,6 +447,7 @@ body {
   text-align: center;
   gap: 20px;
   line-height: 1.6;
+  color: #77b3e5;
 }
 
 .pop-up .box .text b {
@@ -425,7 +467,6 @@ body {
 }
 
 .pop-up .box .exit:hover {
-  color: #77b3e5;
   box-shadow: 0 0 5px #77b3e5 inset;
 }
-/*End Binary inputs Part*/
+/* End Pop Up */
