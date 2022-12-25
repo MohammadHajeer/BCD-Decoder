@@ -135,6 +135,12 @@ body {
 
 @media (max-height: 720px) {
   .container .connectors {
+    top: 33%;
+  }
+}
+
+@media (max-height: 670px) {
+  .container .connectors {
     display: none;
   }
 }
@@ -298,6 +304,11 @@ body {
 
 .container .connectors .line-g .line-2 {
   transition-delay: 1s;
+}
+
+.container .connectors .line-a .line-2,
+.container .connectors .line-g .line-2 {
+  transition-delay: 1.5s;
 }
 
 .container .connectors .line-a .line-2,
